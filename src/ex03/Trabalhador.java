@@ -6,10 +6,17 @@ public class Trabalhador {
     private int horasTrabalhadas;
     private double salarioTotal;
 
-    public void getSalarioTotal(){
-        double salarioTotal = this.getHorasTrabalhadas() * this.getSalarioPorHora();
-        System.out.println("O salário total de: " +this.getNome() + "é: " +this.salarioTotal);
+    public Trabalhador(String nome, double salarioPorHora, int horasTrabalhadas) {
+        this.nome = nome;
+        this.salarioPorHora = salarioPorHora;
+        this.horasTrabalhadas = horasTrabalhadas;
+    }
 
+    public double getSalarioTotal(){
+        double salarioTotal = this.getHorasTrabalhadas() * this.getSalarioPorHora();
+        System.out.println("O salário total de: " +this.getNome() + " é: " +this.salarioTotal);
+
+        return salarioTotal;
     }
 
 
